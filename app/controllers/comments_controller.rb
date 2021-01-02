@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   @@aid =0
   @@aa =""
   @@cc = ""
+  @@jdg_id = ""
 
   def index
     if params[:id] == "301" then
@@ -29,7 +30,7 @@ class CommentsController < ApplicationController
   def update
     comments = Comment.where(answer_id: @@aid).last  
     comments.update(comment_params)
-    redirect_to comment_path
+    redirect_to answer_comments_path(@@jdg_id)
   end
   
 
@@ -56,6 +57,7 @@ class CommentsController < ApplicationController
     
     if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and  (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
       jdg.save
+      @@jdg_id = jdg.answer_id
       redirect_to  answer_comments_path(jdg.answer_id)
     else
       redirect_to  top_path  
