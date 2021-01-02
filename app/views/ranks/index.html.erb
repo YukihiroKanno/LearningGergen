@@ -2,7 +2,6 @@
   <% @id %>    
   <%  if @id == "301" then %>
     <h1 class="ranking_title">平成３０年　事例１　ランキング</h1>
-    <%= render 'ranks/list' %>
   <%  elsif @id == "302" then %>  
     <h2 >平成３０年　事例２　ランキング</h2>
     <%= render 'ranks/list' %>
@@ -164,11 +163,31 @@
     <h2>平成１８　事例４　ランキング</h2>
     <%= render 'ranks/list' %>         
     
-    
-    
-    
-    
   <% end %>
+  
+  <div class="blog-box">
+   <div class ="blog-item clearfix">
+   <section class = "blog-text">
+   　<% no = 1 %>              
+   <div class = "foo">
+    <ul class = "foo1">
+      <li>順位ID</li>
+      <li>名前</li>  
+      <li>得点</li>
+      <li>投稿日</li>
+      <% @answers.each do |f| %></ul><ul class = "foo2">
+      　<li><%= no %></li>
+      　<li><%= f.user.name %></li>  
+      　<li><%= f.score %></li>
+      　<li><%= f.created_at.strftime('%Y/%m/%d') %></li></ul></ul> <% no = no + 1 %><% end %>
+   
+  <br>
+  <br>
+  <br>
+  <div　class="button_side">
+ 　<%= button_to "過去問へ戻 る ", {controller: 'answers', action: 'index'}, {method: :get} %> 
+ </div>  
+  
 </section>    
 
 

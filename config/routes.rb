@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   end
   
   get 'ranks/index'
-  get 'ranks/new'
   get 'ranks/show'
   
   get 'reviews/index'
