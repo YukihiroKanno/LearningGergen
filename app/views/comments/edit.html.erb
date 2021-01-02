@@ -75,11 +75,17 @@
 　　     <label><%= f.radio_button :judge5, 2 %> D</label>
 　　     <label><%= f.radio_button :judge5, 0 %> E</label>
 　     </label> 
-　     <br>        
-       <%= f.submit '登録する' %>    
+　     <br> 
+　     <br>
+       <%= f.submit '再評価結果を提出する。' %>    
 
     <% end %>  
   <% end %>   
 <% end %>
-
+  <br>
+   <br>
+     </div>
+ <div　class="button_side">
+ 　　<%= button_to "過去問へ戻 る ", {controller: 'answers', action: 'index'}, {method: :get} %> 
+ 　</div> 
 

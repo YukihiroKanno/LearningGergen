@@ -15,6 +15,9 @@ class CommentsController < ApplicationController
   end
 
   def show
+    puts "--- answer id ------"
+    puts params[:answer_id]
+    puts "--------------------"  
     @comments = Comment.where(answer_id: params[:answer_id]).last
   
   end
@@ -24,11 +27,11 @@ class CommentsController < ApplicationController
   end
 
   def update
-    comment = Comment.where(answer_id: params[:answer_id]).last  
-    comment.update(comment_params)
-    redirect_to top_path
-    
+    comments = Comment.where(answer_id: @@aid).last  
+    comments.update(comment_params)
+    redirect_to comment_path
   end
+  
 
 
   def create
@@ -66,7 +69,15 @@ class CommentsController < ApplicationController
     @comment = Comment.new
     @comment.answer_id = @answer.id
     @@aa = params[:id]
-  
+    puts "#### @answer ########"
+    puts @answer
+    puts "#### @@aid ########"
+    puts @@aid
+    puts "#### @comment.answer_id ###"
+    puts @comment.answer_id
+    puts "#### @@aa #############"
+    puts @@aa
+    puts "#######################"
   end
   
   private
