@@ -3,10 +3,10 @@
       <h2>平成３０年　事例１【解答を編集する】</h2>
       <br>
       <br>
-      <%= form_for(@answer) do |f| %>
-        <h4>第1問（配点20点）<h4>
-          <%= f.text_area :ans1, :size=>"115x10"%>
-        <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+      <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
       
       <h4>第2問（配点40点）<h4>
       <h4>(設問1)</h4>
@@ -24,10 +24,1211 @@
       <h4>第4問（配点20点）</h4>
       <%= f.text_area :ans5,:size=>"115x10"%>
       <br>
-      <%= f.submit '登録する' %>    
+      <%= f.submit '更新' %>    
     <% end %>
- <% end %>   
-
+ <% end %>
+<% elsif @answer.year == 29 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２９年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２９年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点25点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２９年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２９年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点29点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点28点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans7, :size=>"115x10"%>
+      <br>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans8, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+<% end %>
+<% elsif @answer.year == 28 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２８年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点40点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２８年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点25点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+        <%= f.submit '更新' %>
+    <% end %> 
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２８年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4>          
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      
+      <h4>第2問（配点35点）<h4>      
+      <h4>(設問1)</h4>         
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>   
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点15点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      
+      <h4>第4問（配点25点）<h4>
+      <h4>(設問1)</h4>                   
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>   
+          <%= f.text_area :ans7, :size=>"115x10"%>
+      <br>
+        <%= f.submit '更新' %>
+    <% end %> 
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２８年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点35点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点15点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 27 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２７年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２７年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>          
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4>             
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <h4>(設問2)</h4>             
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２７年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>           
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>           
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問3)</h4>           
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２７年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点29点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点28点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans7, :size=>"115x10"%>
+      <br>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans8, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 26 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２６年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２６年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>第2問（配点25点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4>               
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>     
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２６年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>第2問（配点20点）<h4>           
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>第3問（配点40点）<h4>   
+      <h4>(設問1)</h4>      
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２６年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点24点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans7, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点16点）</h4>      
+          <%= f.text_area :ans8, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 25 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２５年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点35点）<h4>
+      <h4>(設問1)</h4>            
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点35点）</h4>
+      <h4>(設問1)</h4>      
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点15点）</h4>
+      <br>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点15点）</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２５年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>第2問（配点20点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4>               
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>     
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+      <h4>(設問1)</h4>          
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <h4>(設問2)</h4>          
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２５年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問1)</h4>           
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+      <br>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4>             
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>             
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２５年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点45点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 24 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２４年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）</h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+   <% elsif @answer.jirei == 2 %>
+      <h2>平成２４年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4>     
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>               
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4> 
+      <h4>(設問1)</h4> 
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>          
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>           
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２４年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>           
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <p> <%= @answer.ans3 %></p>  
+      <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4>             
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>             
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２４年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 23 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２３年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>     
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+   <% elsif @answer.jirei == 2 %>
+      <h2>平成２３年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4>     
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>               
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4> 
+      <h4>(設問1)</h4> 
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>          
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>           
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２３年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>           
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <p> <%= @answer.ans3 %></p>  
+      <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4>             
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4>             
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点30点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２３年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+  <h4>(設問2)</h4>:w
+      <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 22 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２２年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+      <h4>(設問1)</h4>     
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）</h4>
+      <h4>(設問1)</h4>       
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <h4>(設問2)</h4> 
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２２年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点10点）<h4>                
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4> 
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点30点）<h4>           
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２２年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点40点）<h4>  
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２２年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>      
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点15点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+ <% elsif @answer.year == 21 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２１年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２１年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点10点）<h4>                
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4> 
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点30点）<h4>           
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２１年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点40点）<h4>  
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２１年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点40点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>      
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 20 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成２０年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成２０年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>      
+      <h4>第5問（配点30点）</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成２０年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）<h4>  
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点25点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点25点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成２０年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>      
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 19 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成１９年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点15点）</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点15点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点45点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <h4>(設問3)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <br>            
+      <h4>第5問（配点15点）</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成１９年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>      
+      <h4>第4問（配点20点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <h2>平成１９年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+  <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <h2>平成１９年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点25点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>      
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点25点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
+  <% elsif @answer.year == 18 %>
+    <% if @answer.jirei == 1 %>
+      <h2>平成１８年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点30点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）</h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点10点）</h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 2 %>
+      <h2>平成１８年　事例２【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点15点）</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点30点）</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点15点）</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 3 %>  
+      <br>
+      <h2>平成１８年　事例３【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点10点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点25点）<h4>  
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点25点）<h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点20点）<h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <br>
+      <h4>第5問（配点20点）<h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+    <% elsif @answer.jirei == 4 %> 
+      <br>
+      <h2>平成１８年　事例４【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer, url: {controller: 'answers', action: 'update' }) do |f| %>
+      <h4>第1問（配点30点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+      <br>
+      <h4>第2問（配点20点）<h4>      
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans2, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <h4>(設問1)</h4>
+          <%= f.text_area :ans4, :size=>"115x10"%>
+      <h4>(設問2)</h4>
+          <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+      <h4>第4問（配点15点）<h4>
+          <%= f.text_area :ans6, :size=>"115x10"%>
+      <br>          
+      <h4>第5問（配点15点）<h4>
+      <h4>(設問1)</h4>    
+          <%= f.text_area :ans7, :size=>"115x10"%>
+      <h4>(設問2)</h4>    
+          <%= f.text_area :ans8, :size=>"115x10"%>
+        <br>
+        <%= f.submit '更新' %>
+    <% end %>
+  <% end %>
 <% end %>
 
 

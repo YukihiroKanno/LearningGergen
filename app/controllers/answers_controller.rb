@@ -205,12 +205,12 @@ class AnswersController < ApplicationController
   def update
     answer = Answer.find(params[:id])
     answer.update(answer_params)
-    redirect_to answers_index_path
+    redirect_to answer_path
   end
   
    private
    def answer_params
-       params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6 )
+     params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6, :ans7, :ans8, :ans9, :ans10 )
    end
   
   

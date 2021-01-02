@@ -36,11 +36,6 @@ Rails.application.routes.draw do
   get 'comments/show',as: 'show_comment'
   
   
-  get 'answers/index'
-  get 'answers/new'
-  get 'answers/edit'
-  get 'answers/show'
-  
   devise_for :users
   
   get '/top' => 'root#top'
@@ -48,13 +43,6 @@ Rails.application.routes.draw do
   get 'comments/update'
   get 'comments/create'
   
-  get 'answers/index'
-  get 'answers/update'
-  get 'answers/edit'
-  get 'answers/new'
-  get 'answers/create'
-  
-  resources :answers
   resources :comments
   resources :drills
   resources :profiles
