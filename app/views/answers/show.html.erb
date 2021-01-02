@@ -1059,7 +1059,7 @@
 <br>
 <div　class="button_side">
  <%= button_to "修正する", {controller: 'answers', action: 'edit'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %> 
- <%= button_to " 戻 る ", {controller: 'answers', action: 'index'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %> 
+ <%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %> 
  
 </div>    
 
