@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_113221) do
+ActiveRecord::Schema.define(version: 2021_01_03_124324) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "year"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_113221) do
     t.datetime "updated_at", null: false
     t.integer "score"
     t.string "judge"
+    t.integer "cnum"
   end
 
   create_table "comments", force: :cascade do |t|

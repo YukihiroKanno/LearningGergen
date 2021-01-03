@@ -116,8 +116,8 @@
       <li>名前</li>  
       <li>得点</li>
       <li>判定</li>
+      <li>解答No</li>
       <li>評価数</li>
-      <li>投稿日</li>
       <li>詳細</li> 
       <% @answers.each do |f| %></ul><ul class = "foo2">
       　<li><%= no %></li>
@@ -125,7 +125,7 @@
       　<li><%= f.score %></li>
       　<li><%= f.judge %></li>
       　<li><%= f.id %></li>
-      　<li><%= f.created_at.strftime('%Y/%m/%d') %></li>
+      　<li><%= f.cnum %></li>
       　<li><%= button_to "見る", {controller: 'ranks', action: 'show'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
    
   <br>

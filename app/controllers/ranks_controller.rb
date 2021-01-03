@@ -153,13 +153,17 @@ class RanksController < ApplicationController
     @id = id
     score = 0
     judge = "C"
+    cnum = 0
+    cnt = 1
     ans.each do |f| 
       if f.comments.average(:score).nil?
         score = 0
         judge = "未"
-        ans.where(id: f.id).update( score: score, judge: judge )
+        cnum = 0
+        ans.where(id: f.id).update( score: score, judge: judge,cnum: cnum )
       else    
         score =  f.comments.average(:score).round(0)
+        f.comments
         if(score >= 60)
           judge = "A"
         elsif (score >= 50)
@@ -168,17 +172,23 @@ class RanksController < ApplicationController
           judge = "C"
         else
           judge = "D"    
-      end
-      ans.where(id: f.id).update( score: score, judge: judge )
+        end
+      cnum = Comment.where(answer_id: f.id).count
+      ans.where(id: f.id).update( score: score, judge: judge,cnum: cnum )
+      
       puts "###########"
+      puts f.id
       puts score
       puts judge
+      puts cnt
       puts "###########"
+      cnt = cnt + 1
      end        
-    end
     
+    end
     @answers = Answer.where(year: year).where(jirei: jirei).order(score: "desc")  
-      
+    
+    
   end
 
   def show
@@ -186,7 +196,7 @@ class RanksController < ApplicationController
     puts  params[:id]
     puts "##########"
     @answers = Answer.where(id: params[:id]).where(year: 30).where(jirei: 1).includes(:comments)  
-  
+    
   end
   
   
