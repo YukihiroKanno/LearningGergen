@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
     # DBへ保存する
     ans.save
     # トップ画面へリダイレクト
-    redirect_to  profiles_index_path
+    redirect_to  profile_path(ans.user_id)
       
   end
   
@@ -37,7 +37,7 @@ class ProfilesController < ApplicationController
   
   private
   def profile_params
-       params.require(:profile).permit(:id, :user_id, :capa, :exep, :most1, :most2, :most3, :most4, :ans5, :ans6 )
+       params.require(:profile).permit(:id, :user_id, :capa, :exep, :most1, :most2, :most3, :most4, :profile )
 
   end
 

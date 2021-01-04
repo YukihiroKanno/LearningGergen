@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_03_124324) do
+ActiveRecord::Schema.define(version: 2021_01_03_235301) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "year"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 2021_01_03_124324) do
     t.integer "most4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "profile"
   end
 
   create_table "reviews", force: :cascade do |t|

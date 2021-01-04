@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'members/index'
+  get 'members/show'
   resources :mines
   
   resources :titles  do
@@ -14,6 +16,9 @@ Rails.application.routes.draw do
     resource :reviews 
   end
   
+  get 'members' => 'members#index'
+  get 'members/:id' => 'members#show'
+  
   get 'ranks/index'
   get 'ranks/show'
   
@@ -21,13 +26,6 @@ Rails.application.routes.draw do
   get 'reviews/new'
   get 'reviews/update'
   post 'reviews/create'
-  
-  get 'profiles/index'
-  get 'profiles/new'
-  get 'profiles/show'
-  get 'profiles/edit'
-  get 'drills/index'
-  get 'drills/edit'
   
   devise_for :users
   

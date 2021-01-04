@@ -1,2 +1,83 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+ <section class = "blog">
+     <h2 class="blog-headline">プロフィール　設定</h2>
+     <br>
+     <%= button_to "作成する", {controller: 'profiles', action: 'edit'}, {method: :get } %>
+     <div class="blog-box">
+       <div class ="blog-item clearfix">
+       <% if @profiles.present? %>
+        <h3 class="menu_heda">診断士資格</h3> 
+          <% if @profiles.capa == 1 %>  
+        　  <p>有り</p>
+        　  <br>
+          <% else %>
+        　<p>無し</p>
+        　<br>
+          <% end %>
+        <h3 class="menu_heda">2次試験受験経験</h3>
+        　<% if @profiles.expe == 1 %>  
+        　  <p>有り</p>
+        　  <br>
+        　<% elsif @profiles.expe == 0 %>
+        　　<p>無し</p> 
+        　　<br>
+        　<% end %>        
+        <h3 class="menu_heda">事例1最高結果</h3>
+        　<% if @profiles.most1 == 3 %>  
+        　　<p>A</p>
+        　　<br>
+        　<% elsif @profiles.most1 == 2 %>  
+        　　<p>B</p>
+        　　<br>
+        　<% elsif @profiles.most1 == 1 %>  
+        　　<p>C</p>
+        　　<br>        　
+        　<% elsif @profiles.most1 == 0 %>  
+        　　<p>D</p>
+        　　<br> 
+        　<% end %>　
+        　<h3 class="menu_heda">事例2最高結果</h3>
+        　<% if @profiles.most2 == 3 %>  
+        　　<p>A</p>
+        　　<br>
+        　<% elsif @profiles.most2 == 2 %>  
+        　　<p>B</p>
+        　　<br>
+        　<% elsif @profiles.most2 == 1 %>  
+        　　<p>C</p>
+        　　<br>        　
+        　<% elsif @profiles.most2 == 0 %>  
+        　　<p>D</p>
+        　　<br>  
+        　<% end %>　
+        　<h3 class="menu_heda">事例3最高結果</h3>
+        　<% if @profiles.most3 == 3 %>  
+        　　<p>A</p>
+        　　<br>
+        　<% elsif @profiles.most3 == 2 %>  
+        　　<p>B</p>
+        　　<br>
+        　<% elsif @profiles.most3 == 1 %>  
+        　　<p>C</p>
+        　　<br>        　
+       　　 <% elsif @profiles.most3 == 0 %>  
+        　　<p>D</p>
+        　　<br>     
+        　<% end %>
+        　<h3 class="menu_heda">事例4最高結果</h3>
+        　<% if @profiles.most4 == 3 %>  
+        　　<p>A</p>
+        　　<br>
+        　<% elsif @profiles.most4 == 2 %>  
+        　　<p>B</p>
+        　　<br>
+        　<% elsif @profiles.most4 == 1 %>  
+        　　<p>C</p>
+        　　<br>        　
+        　<% elsif @profiles.most4 == 0 %>  
+        　　<p>D</p>
+        　　<br>      
+        　<% end %> 
+        <% end %>　
+       </div>    
+     </div>    
+ </section> 

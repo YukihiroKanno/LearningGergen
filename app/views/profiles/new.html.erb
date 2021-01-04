@@ -55,7 +55,12 @@
 　　　  <label><%= f.radio_button :most4, 1 %> C</label>　　　
 　　　  <label><%= f.radio_button :most4, 0 %> D</label>　　　
 　　  </label> 
-      <br>        
+　　  <br>
+　　  <br>        
+　    <h3 class="menu_heda">コメント</h3>
+　    <br>
+　　　<p><%= f.text_area :profile, :size=>"115x10"%></p>
+　　  <br>        
       <%= f.submit '登録', include_hidden: false %>
     <% end %>  
   </div>
