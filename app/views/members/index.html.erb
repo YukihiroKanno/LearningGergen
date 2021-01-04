@@ -3,16 +3,21 @@
    <div class = "foo">
     <ul class = "foo1">
       <li>登録番号</li>
-      <li>お名前</li> 
+      <li>名前</li> 
+      <li>登録日</li> 
       <li>情報を見る。</li>
   <% @usr.each do |u| %>   
     </ul>
      <ul class = "foo2">
       <li><%= u.id %></li>
       <li><%= u.name %></li>
+      <li><%= u.created_at.strftime('%Y/%m/%d') %></li>  
       <li><%= button_to "実行", {controller: 'members', action: 'show'}, {method: :get, params: {id: u.id }} %></li></ul>
   <% end %>
-  
+ <br>
+ <br>
  <div　class="button_side">
+   <%= button_to "トップへ戻る", {controller: 'answers', action: 'index'}, {method: :get} %> 
+   <br>
  　<%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
  </div>   
