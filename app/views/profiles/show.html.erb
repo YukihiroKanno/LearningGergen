@@ -1,10 +1,8 @@
  <section class = "blog">
      <h2 class="blog-headline">プロフィール　設定</h2>
      <br>
-     <%= button_to "作成する", {controller: 'profiles', action: 'edit'}, {method: :get } %>
      <div class="blog-box">
        <div class ="blog-item clearfix">
-       <% if @profiles.present? %>
         <h3 class="menu_heda">診断士資格</h3> 
           <% if @profiles.capa == 1 %>  
         　  <p>有り</p>
