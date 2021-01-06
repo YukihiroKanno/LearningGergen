@@ -1,19 +1,85 @@
 <section class = "blog">
-<h2 class="blog-headline">会員詳細情報</h2>
-<br>
-<% if @pro.nil? %>
-  <p>プロフィール情報は登録されていません。</p>
-<% else %>
-  <%= @pro.user_id  %> 
-  <%= @pro.capa  %> 
-  <%= @pro.expe  %> 
-  <%= @pro.most1  %> 
-  <%= @pro.most2  %> 
-  <%= @pro.most3  %> 
-  <%= @pro.most4  %> 
-  <%= @pro.profile  %> 
-<% end %>  
- </section>    
+  <h2 class="blog-headline">会員詳細情報</h2>
+  <br>
+  <% if @pro.nil? %>
+    <p>プロフィール情報は登録されていません。</p>
+  <% else %>
+    <h3 class="menu_heda">診断士資格</h3> 
+    <% if @pro.capa == 1 %>  
+      <p>有り</p>
+    　<br>
+    <% else %>
+      <p>無し</p>
+    　<br>
+    <% end %>
+    <h3 class="menu_heda">2次試験受験経験</h3>
+    <% if @pro.expe == 1 %>  
+      <p>有り</p>
+    　<br>
+    　<h3 class="menu_heda">事例1最高結果</h3>
+    　<% if @pro.most1 == 3 %>  
+    　  <p>A</p>
+        <br>
+      <% elsif @pro.most1 == 2 %>  
+        <p>B</p>
+        <br>
+      <% elsif @pro.most1 == 1 %>  
+        <p>C</p>
+        <br>        　
+      <% elsif @pro.most1 == 0 %>  
+        <p>D</p>
+        <br> 
+      <% end %>　
+      <h3 class="menu_heda">事例2最高結果</h3>
+      <% if @pro.most2 == 3 %>  
+        <p>A</p>
+        <br>
+      <% elsif @pro.most2 == 2 %>  
+        <p>B</p>
+        <br>
+      <% elsif @pro.most2 == 1 %>  
+        <p>C</p>
+        <br>        　
+      <% elsif @pro.most2 == 0 %>  
+        <p>D</p>
+        <br>  
+      <% end %>　
+      <h3 class="menu_heda">事例3最高結果</h3>
+      <% if @pro.most3 == 3 %>  
+        <p>A</p>
+        <br>
+      <% elsif @pro.most3 == 2 %>  
+        <p>B</p>
+        <br>
+      <% elsif @pro.most3 == 1 %>  
+        <p>C</p>
+        <br>        　
+      <% elsif @pro.most3 == 0 %>  
+        <p>D</p>
+        <br>     
+      <% end %>
+      <h3 class="menu_heda">事例4最高結果</h3>
+      <% if @pro.most4 == 3 %>  
+        <p>A</p>
+      　<br>
+      <% elsif @pro.most4 == 2 %>  
+        <p>B</p>
+      　<br>
+      <% elsif @pro.most4 == 1 %>  
+        <p>C</p>
+      　<br>        　
+      <% elsif @pro.most4 == 0 %>  
+        <p>D</p>
+      　<br>      
+      <% end %>
+    <% else %>
+      <p>無し</p> 
+      <br>
+    <% end %> 
+  <h3 class="menu_heda">コメント</h3>  
+  <p><%= @pro.profile %></p>
+ <% end %>  
+</section>    
    <div class = "sidebar">
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>

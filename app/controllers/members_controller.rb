@@ -6,11 +6,15 @@ class MembersController < ApplicationController
   end
 
   def show
-    puts 'SSSSSSSS'
-    puts params[:id]
-    puts 'aaaaaaaaaaa'
-    
     @pro = Profile.where(user_id: params[:id]).last   
       
   end
+  
+  private
+  def profile_params
+   params.require(:profile).permit(:id, :user_id, :capa, :exep, :most1, :most2, :most3, :most4, :profile )
+  end
+  
+  
+  
 end
