@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'members/index'
-  get 'members/show'
+  
   resources :mines
   
   resources :titles  do
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
   
   get 'members' => 'members#index'
-  get 'members/:id' => 'members#show'
+  get 'members/show' => 'members#show', as:'show_member'
   
   get 'ranks/index'
   get 'ranks/show'

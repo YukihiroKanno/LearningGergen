@@ -1,2 +1,35 @@
-<h1>Members#show</h1>
-<p>Find me in app/views/members/show.html.erb</p>
+<section class = "blog">
+<h2 class="blog-headline">会員詳細情報</h2>
+<br>
+<% if @pro.nil? %>
+  <p>プロフィール情報は登録されていません。</p>
+<% else %>
+  <%= @pro.user_id  %> 
+  <%= @pro.capa  %> 
+  <%= @pro.expe  %> 
+  <%= @pro.most1  %> 
+  <%= @pro.most2  %> 
+  <%= @pro.most3  %> 
+  <%= @pro.most4  %> 
+  <%= @pro.profile  %> 
+<% end %>  
+ </section>    
+   <div class = "sidebar">
+     <section class="popular">
+        <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　<%= link_to '会員リスト', members_path %></p>      
+          <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
+         </div>
+      </section>
+   </div>
+ <br>
+ <br>
+ 
+ <div　class="button_side">
+   <%= button_to "トップへ戻る", {controller: 'answers', action: 'index'}, {method: :get} %> 
+   <br>
+ 　<%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
+ </div>

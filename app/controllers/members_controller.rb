@@ -6,5 +6,11 @@ class MembersController < ApplicationController
   end
 
   def show
+    puts 'SSSSSSSS'
+    puts params[:id]
+    puts 'aaaaaaaaaaa'
+    
+    @pro = Profile.where(user_id: params[:id]).last   
+      
   end
 end
