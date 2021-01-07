@@ -1,4 +1,3 @@
- <section class = "blog">
      <h2 class="blog-headline">プロフィール　設定</h2>
      <br>
      <div class="blog-box">
@@ -15,11 +14,7 @@
         　<% if @profiles.expe == 1 %>  
         　  <p>有り</p>
         　  <br>
-        　<% elsif @profiles.expe == 0 %>
-        　　<p>無し</p> 
-        　　<br>
-        　<% end %>        
-        <h3 class="menu_heda">事例1最高結果</h3>
+            <h3 class="menu_heda">事例1最高結果</h3>
         　<% if @profiles.most1 == 3 %>  
         　　<p>A</p>
         　　<br>
@@ -75,7 +70,18 @@
         　　<p>D</p>
         　　<br>      
         　<% end %> 
-        <% end %>　
+        　  
+        　<% else %>
+        　　<p>無し</p> 
+        　　<br>
+        　<% end %>        
+        <h3 class="menu_heda">コメント</h3>
+        <p>@profiles.profile</p>
        </div>    
      </div>    
- </section> 
+     
+     <div　class="button_side">
+ <%= button_to "内容を修正する。", {controller: 'profiles', action: 'edit'}, {method: :get, params: {id: @profiles.user_id}} %>
+ <br>
+ <%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
+</div> 

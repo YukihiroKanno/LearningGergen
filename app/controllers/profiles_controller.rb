@@ -11,11 +11,12 @@ class ProfilesController < ApplicationController
   end
 
   def show
-      
+    @profiles = Profile.find(params[:id])
+    
   end
 
   def edit
-      
+    @profiles = Profile.find(params[:id])  
   end
   
   def create

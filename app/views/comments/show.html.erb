@@ -63,8 +63,8 @@
     <% elsif(@comments.answer.jirei == 4)then  %>
     <% end %>
   <% end %>
-  
+  ｓ
 <div　class="button_side">
- <%= button_to "評価をやり直す。", {controller: 'comments', action: 'edit'}, {method: :get, params: {id: @comments.answer.id,year: @comments.answer.year,jirei: @comments.answer.jirei}} %>
+ <%= button_to "修正する。", {controller: 'comments', action: 'edit'}, {method: :get, params: {id: @comments.answer.id,year: @comments.answer.year,jirei: @comments.answer.jirei}} %>
  <%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
 </div>    
