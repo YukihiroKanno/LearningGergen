@@ -1,2 +1,66 @@
-<h1>Profiles#edit</h1>
-<p>Find me in app/views/profiles/edit.html.erb</p>
+<section>
+  <div class="blog">
+  <section class = "blog-text">
+    <h2 class="blog-headline" >プロフィールの修正</h2>
+    <br>
+    </p>
+　　<%= form_for  @profiles,:url => {:action => :update} do |f| %>
+　    <h3 class="menu_heda">診断士資格</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :capa, 1 %> 有り</label>
+　　　  <label><%= f.radio_button :capa, 0 %> 無し</label>
+　　  </label> 
+      <br>
+　    <h3 class="menu_heda">2次試験受験経験</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :expe, 1 %> 有り</label>
+　　　  <label><%= f.radio_button :expe, 0 %> 無し</label>
+　　  </label> 
+      <br>    
+　    <h3 class="menu_heda">事例1最高結果</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :most1, 3 %> A</label>
+　　　  <label><%= f.radio_button :most1, 2 %> B</label>　　　
+　　　  <label><%= f.radio_button :most1, 1 %> C</label>　　　
+　　　  <label><%= f.radio_button :most1, 0 %> D</label>　　　
+　　  </label> 
+      <br>      
+　    <h3 class="menu_heda">事例2最高結果</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :most2, 3 %> A</label>
+　　　  <label><%= f.radio_button :most2, 2 %> B</label>　　　
+　　　  <label><%= f.radio_button :most2, 1 %> C</label>　　　
+　　　  <label><%= f.radio_button :most2, 0 %> D</label>　　　
+　　  </label> 
+      <br>        
+　    <h3 class="menu_heda">事例3最高結果</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :most3, 3 %> A</label>
+　　　  <label><%= f.radio_button :most3, 2 %> B</label>　　　
+　　　  <label><%= f.radio_button :most3, 1 %> C</label>　　　
+　　　  <label><%= f.radio_button :most3, 0 %> D</label>　　　
+　　  </label> 
+      <br>        
+　    <h3 class="menu_heda">事例4最高結果</h3>
+　　  <br>  
+  　   <label>
+　　　  <label><%= f.radio_button :most4, 3 %> A</label>
+　　　  <label><%= f.radio_button :most4, 2 %> B</label>　　　
+　　　  <label><%= f.radio_button :most4, 1 %> C</label>　　　
+　　　  <label><%= f.radio_button :most4, 0 %> D</label>　　　
+　　  </label> 
+　　  <br>
+　　  <br>        
+　    <h3 class="menu_heda">コメント</h3>
+　    <br>
+　　　<p><%= f.text_area :profile, :size=>"115x10"%></p>
+　　  <br>        
+      <%= f.submit '再登録', include_hidden: false %>
+    <% end %>  
+  </div>
+</section>
