@@ -31,7 +31,10 @@ class ProfilesController < ApplicationController
   end
   
   def update
-      
+   ans = Profiles.find(params[:id])
+   ans.update(profile_params)
+　 redirect_to  profile_path(ans.user_id)
+    
   end
   
   def destroy
