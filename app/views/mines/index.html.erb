@@ -39,16 +39,28 @@
       <br>    
   <% end %>
 
-<h3 class="menu_heda">掲示版</h3>
+<h3 class="menu_heda">Tolk</h3>
   <br>
   <% if @titles.present? %>
     <% @titles.each do |f| %>
        <h5 class="title_h3"><%= link_to f.title , title_communications_path(f.id) %>  <%= link_to f.created_at.strftime('%Y/%m/%d'),title_communications_path(f.id) %>　</h5>           
     <% end %>
   <% else %>
-      <p>掲示版に設定したテーマはありません。</p>
+      <p>Tolkに設定したテーマはありません。</p>
       <br>
   <% end %>
+<h3 class="menu_heda">プロフィールk</h3>
+  <br>
+  <% if @prof.present? %>
+    <% @prof.each do |f| %>
+       <h5 class="title_h3"><%= link_to f.title , title_communications_path(f.id) %>  <%= link_to f.created_at.strftime('%Y/%m/%d'),title_communications_path(f.id) %>　</h5>           
+    <% end %>
+  <% else %>
+      <p>Tolkに設定したテーマはありません。</p>
+      <br>
+  <% end %>  
+  
+  
 <br>
 <br>
 <br>

@@ -5,6 +5,7 @@ class MinesController < ApplicationController
     @answers = Answer.where(user_id: current_user.id)
     @drills = Drill.where(user_id: current_user.id)
     @titles = Title.where(user_id: current_user.id)
+    @prof = Profiles.where(user_id: current_user.id)
   end
   
   
