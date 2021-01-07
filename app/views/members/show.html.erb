@@ -80,13 +80,15 @@
   <p><%= @pro.profile %></p>
  <% end %>  
 </section>    
+
+  </section>    
    <div class = "sidebar">
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
           <p class="popular-text">　<%= link_to '会員リスト', members_path %></p>      
           <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p>            
-          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '事例企業分析', drills_path %></p> 
           <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
          </div>
       </section>
@@ -95,7 +97,9 @@
  <br>
  
  <div　class="button_side">
-   <%= button_to "トップへ戻る", {controller: 'answers', action: 'index'}, {method: :get} %> 
-   <br>
- 　<%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
+  <%= link_to :back do %>
+     <button>前に戻る</button>
+   <% end %>
+
+
  </div>
