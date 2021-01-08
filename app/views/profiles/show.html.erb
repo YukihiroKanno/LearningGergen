@@ -74,14 +74,19 @@
         　<% else %>
         　　<p>無し</p> 
         　　<br>
+         <h3 class="menu_heda">コメント</h3>
+        <p><% @profiles.profile %></p>
         　<% end %>        
-        <h3 class="menu_heda">コメント</h3>
-        <p>@profiles.profile</p>
        </div>    
-     </div>    
-     
-     <div　class="button_side">
- <%= button_to "内容を修正する。", {controller: 'profiles', action: 'edit'}, {method: :get, params: {id: @profiles.user_id}} %>
+     </div> 
+ <div　class="button_side">
+ <%= button_to "修正する。", {controller: 'profiles', action: 'edit'}, {method: :get} %>
+</div>       
+  <br>
  <br>
- <%= button_to "過去問へ戻る。", {controller: 'answers', action: 'index'}, {method: :get} %> 
-</div> 
+  <div　class="button_side">
+  <%= link_to :back do %>
+     <button>前に戻る</button>
+   <% end %>    
+  </div>
+ 

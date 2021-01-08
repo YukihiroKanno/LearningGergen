@@ -17,6 +17,7 @@ class ProfilesController < ApplicationController
 
   def edit
     @profiles = Profile.find(params[:id])  
+  
   end
   
   def create
@@ -31,8 +32,9 @@ class ProfilesController < ApplicationController
   end
   
   def update
-   ans = Profiles.find(params[:id])
-   ans.update(profile_params)
+   ans = Profile.find(params[:id])
+   ans.user_id = current_user.id
+   ans.update(ans_params)
 　 redirect_to  profile_path(ans.user_id)
     
   end
