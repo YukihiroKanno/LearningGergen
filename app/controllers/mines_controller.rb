@@ -8,5 +8,10 @@ class MinesController < ApplicationController
     @prof = Profile.where(user_id: current_user.id)
   end
   
+  def destroy
+    post = Profile.find(params[:id])
+    post.destroy
+    redirect_to mines_path
+  end
   
 end

@@ -53,10 +53,10 @@
   <br>
   <% if @prof.present? %>
     <% @prof.each do |f| %>
-       <h5 class="title_h3"><%= f.created_at.strftime('%Y/%m/%d') %><%= button_to "削除" %>　</h5>           
+       <h5 class="title_h3"><%= f.created_at.strftime('%Y/%m/%d') %><%= button_to "削除", destroy_mine_path(f.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>　</h5>           
     <% end %>
   <% else %>
-      <p>Tolkに設定したテーマはありません。</p>
+      <p>プロフィールは、登録されていません。</p>
       <br>
   <% end %>  
   

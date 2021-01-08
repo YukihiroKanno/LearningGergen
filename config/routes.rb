@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'members/index'
   
   resources :mines
+  delete 'mines/:id' => 'mines#destroy', as: 'destroy_mine'
   
   resources :titles  do
     resource :communications 

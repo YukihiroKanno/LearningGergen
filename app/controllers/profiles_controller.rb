@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
   def update
    ans = Profile.find(params[:id])
    ans.user_id = current_user.id
-   ans.update(ans_params)
+   ans.update(profile_params)
 　 redirect_to  profile_path(ans.user_id)
     
   end
