@@ -46,6 +46,7 @@
 <div class="blog-box">
    <div class ="blog-item clearfix">
    <section class = "blog-text">
+   <% if @answers.present? %>      
    　<% no = 1 %>              
    <div class = "foo">
     <ul class = "foo1">
@@ -62,6 +63,9 @@
         　<li><%= f.created_at.strftime('%Y/%m/%d') %></li>   
         　<li><%= button_to "実行", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
      　<% end %>
+     <% else %>
+      <p>採点を希望する投稿はありません。</p>
+     <% end %> 
    <br>
    <br>
    <br>

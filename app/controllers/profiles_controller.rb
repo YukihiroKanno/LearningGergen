@@ -11,7 +11,9 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profiles = Profile.find(params[:id])
+    puts "-----profiles(show(params[:id]--"  
+    puts params[:id]  
+    @profiles = Profile.find(params[:user_id])
     
   end
 
@@ -28,7 +30,10 @@ class ProfilesController < ApplicationController
     ans.save
     # トップ画面へリダイレクト
     redirect_to  profile_path(ans.user_id)
-      
+    puts "---- profiles(ans.user_id) ----"
+    puts ans.user_id
+    
+    
   end
   
   def update

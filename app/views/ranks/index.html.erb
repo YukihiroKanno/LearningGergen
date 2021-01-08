@@ -111,6 +111,7 @@
    <section class = "blog-text">
    　<% no = 1 %>              
    <div class = "foo">
+   <% if @answers.present? %>    
     <ul class = "foo1">
       <li>順位ID</li>
       <li>名前</li>  
@@ -118,8 +119,8 @@
       <li>判定</li>
       <li>解答No</li>
       <li>評価数</li>
-      <li>詳細</li> 
-      <% @answers.each do |f| %></ul><ul class = "foo2">
+      <li>詳細</li>
+     <% @answers.each do |f| %></ul><ul class = "foo2">
       　<li><%= no %></li>
       　<li><%= f.user.name %></li>  
       　<li><%= f.score %></li>
@@ -127,7 +128,10 @@
       　<li><%= f.id %></li>
       　<li><%= f.cnum %></li>
       　<li><%= button_to "見る", {controller: 'ranks', action: 'show'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
-   
+     <% else %>
+         <p>答案は、登録されていません。</p>
+         <br>
+     <% end %>     
   <br>
   <br>
   <br>
