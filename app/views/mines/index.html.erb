@@ -1,19 +1,13 @@
 <h1 class="my_page_title"><%= @usr+"さんのページ" %></h1>
 <br><br><br>
-
+<section class = "blog">
+<h2 class="blog-headline">会員リスト</h2><br>    
 <h3 class="menu_heda">過去問</h3>
   <br>
   <% if @answers.present? %>
-    <table border="1">
-    <tr>
-      <th>試験年度</th><th>事例</th><th>順位</th><th>得点</th><th>コメント数</th>
-    </tr>  
     <% @answers.each do |f| %>
-     <tr>
-       <td><%= f.year %></td><td><%= f.jirei %></td><td></td><td></td><td></td>
-     </tr>
+     <h5 class="title_h3">平成<%= f.year %>  事例<%= f.jirei %>　<%= f.created_at.strftime('%Y/%m/%d') %></h5>      
     <% end %>
-   </table>
    <br>
 　<% else %>
       <p>登録された過去問はありません。</p>
@@ -61,13 +55,24 @@
       <p>プロフィールは、登録されていません。</p>
       <br>
   <% end %>  
-  
-  
 <br>
 <br>
 <br>
  <%= link_to :back do %>
    <button>戻る</button>
  <% end %>
-
-
+</section>
+   <div class = "sidebar">
+     <section class="popular">
+        <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　<%= link_to '会員リスト', members_path %></p>      
+          <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '過去問分析', answers_path %></p>
+          <p class="popular-text">　<%= link_to '事例企業分析', drills_path %></p> 
+         </div>
+      </section>
+   </div>
+ <br>
+ <br>
+ </div>
