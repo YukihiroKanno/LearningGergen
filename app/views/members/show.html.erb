@@ -79,6 +79,13 @@
   <h3 class="menu_heda">コメント</h3>  
   <p><%= @pro.profile %></p>
  <% end %>  
+ <br>
+ <br>
+ <br>
+ <div　class="button_side">
+  <%= link_to :back do %>
+     <button>前に戻る</button>
+   <% end %>
 </section>    
 
   </section>    
@@ -87,19 +94,12 @@
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
           <p class="popular-text">　<%= link_to '会員リスト', members_path %></p>      
-          <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p>            
+          <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '過去問分析', answers_path %></p>
           <p class="popular-text">　<%= link_to '事例企業分析', drills_path %></p> 
-          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
          </div>
       </section>
    </div>
  <br>
  <br>
- 
- <div　class="button_side">
-  <%= link_to :back do %>
-     <button>前に戻る</button>
-   <% end %>
-
-
  </div>
