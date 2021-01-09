@@ -6,7 +6,7 @@
   <br>
   <% if @answers.present? %>
     <% @answers.each do |f| %>
-     <h5 class="title_h3">平成<%= f.year %>  事例<%= f.jirei %>　<%= f.created_at.strftime('%Y/%m/%d') %></h5>      
+     <h5 class="title_h3"><ul class = "foo2"><li>平成<%= f.year %>  </li><li>事例<%= f.jirei %>　</li><li><%= f.created_at.strftime('%Y/%m/%d') %></li><li><%= button_to "見る" %></li><li><%= button_to "作成" %></li></ul></h5>
     <% end %>
    <br>
 　<% else %>
