@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'members/index'
-  
+  resources :considers
+  get 'considers/show' => 'considers#show', as:'show_consider'
+   
   resources :mines
   delete 'mines/:id' => 'mines#destroy', as: 'destroy_mine'
   

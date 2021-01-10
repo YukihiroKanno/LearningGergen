@@ -1,0 +1,273 @@
+ <section class = "blog">
+     <h2 class="blog-headline">過去問一覧</h2>
+     <div class="blog-box">
+       <div class ="blog-item clearfix">
+         <section class = "blog-text">
+   <div class = "foo">
+    <ul class = "foo1">
+      <li>試験年度</li>
+      <li>試験科目</li>  
+      <li>設問作成</li>
+      <li>比較する</li>
+    </ul>
+     <ul class = "foo2">
+      <li>平成30年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "301" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "301" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成30年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "302" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "302" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成30年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "303" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "303" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成29年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "291" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "291" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成29年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "292" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "292" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成29年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "293" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "203" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成28年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "281" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "281" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成28年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "282" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "282" }} %></li>
+     </ul>
+     <ul class = "foo2">
+      <li>平成28年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "283" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "283" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成27年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "271" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "271" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成27年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "272" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "272" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成27年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "273" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "273" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成26年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "261" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "261" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成26年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "262" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "262" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成26年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "263" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "263" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成25年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "251" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "251" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成25年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "252" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "252" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成25年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "253" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "253" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成24年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "241" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "241" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成24年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "242" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "242" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成24年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "243" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "243" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成23年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "231" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "231" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成23年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "232" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "232" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成23年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "233" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "233" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成22年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "221" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "221" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成22年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "222" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "222" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成22年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "223" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "223" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成21年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "211" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "211" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成21年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "212" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "212" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成21年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "213" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "213" }} %></li>
+     </ul>
+
+    <ul class = "foo2">
+      <li>平成20年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "201" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "201" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成20年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "202" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "202" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成20年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "203" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "203" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成19年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "191" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "191" }} %></li>
+     </ul>    
+    <ul class = "foo2">
+      <li>平成19年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "192" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "192" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成19年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "193" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "193" }} %></li>
+     </ul>
+    <ul class = "foo2">
+      <li>平成18年</li>
+      <li>事例1</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "181" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "181" }} %></li>
+     </ul>    
+    <ul class = "foo2">
+      <li>平成18年</li>
+      <li>事例2</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "182" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "182" }} %></li>
+     </ul>
+   <ul class = "foo2">
+      <li>平成18年</li>
+      <li>事例3</li>  
+      <li><%= button_to "作成", {controller: 'considers', action: 'new'}, {method: :get, params: {id: "183" }} %></li>
+      <li><%= button_to "表示", {controller: 'considers', action: 'show'}, {method: :get, params: {id: "183" }} %></li>
+     </ul>
+    </ul>
+   </div>    
+   </div>    
+   <%= link_to :back do %>
+     <button>戻る</button>
+   <% end %>
+   
+   
+   </section>    
+   <div class = "sidebar">
+     <section class="popular">
+        <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　<%= link_to '会員リスト', members_path %></p>      
+          <p class="popular-text">　<%= link_to 'Tolk', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '過去問分析', answers_path %></p> 
+          <p class="popular-text">　<%= link_to '事例企業分析', drills_path %></p> 
+         </div>
+      </section>
+   </div>
+
+
+
+
+
+
