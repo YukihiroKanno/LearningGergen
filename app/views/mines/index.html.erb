@@ -55,7 +55,7 @@
      <% elsif f.id = 18 %>
      <% @jirei = ':2-3-3' %>
      <% end %>
-     <h5 class="title_h3">事例番号<%= @jirei %>  <%= f.created_at.strftime('%Y/%m/%d') %></h5>      
+     <h5 class="title_h3"><ul class = "foo2"><li>事例番号<%= @jirei %> </li> <li><%= f.created_at.strftime('%Y/%m/%d') %></li><li> </li> <li><%= button_to "見る" %></li><li><%= button_to "削除" %></li></ul></h5>  
     <% end %>
    </table>
    <br>     
@@ -68,7 +68,7 @@
   <br>
   <% if @titles.present? %>
     <% @titles.each do |f| %>
-       <h5 class="title_h3"><%= link_to f.title , title_communications_path(f.id) %>  <%= link_to f.created_at.strftime('%Y/%m/%d'),title_communications_path(f.id) %>　</h5>           
+       <h5 class="title_h3"><ul class = "foo2"><li><%= f.title %></li> <li><%= f.created_at.strftime('%Y/%m/%d') %><li></li><li><%= button_to "見る" %></li>　<li><%= button_to "削除" %></li></ul></h5>           
     <% end %>
   <% else %>
       <p>Tolkに設定したテーマはありません。</p>
@@ -80,7 +80,7 @@
   <br>
   <% if @prof.present? %>
     <% @prof.each do |f| %>
-       <h5 class="title_h3"><%= f.created_at.strftime('%Y/%m/%d') %><%= button_to "削除", destroy_mine_path(f.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>　</h5>           
+       <h5 class="title_h3"><ul class = "foo2"><li>登録日時：</li><li><%= f.created_at.strftime('%Y/%m/%d') %></li><li></li><li><%= button_to "削除", destroy_mine_path(f.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></li></ul></h5>           
     <% end %>
   <% else %>
       <p>プロフィールは、登録されていません。</p>

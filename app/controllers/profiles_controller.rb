@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
   def show
     puts "-----profiles(show(params[:id]--"  
     puts params[:id]  
-    @profiles = Profile.find(params[:user_id])
+    @profiles = Profile.find(params[:id])
     
   end
 
@@ -40,7 +40,7 @@ class ProfilesController < ApplicationController
    ans = Profile.find(params[:id])
    ans.user_id = current_user.id
    ans.update(profile_params)
-　 redirect_to  profile_path(ans.user_id)
+　 redirect_to  profile_path(params[:id])
     
   end
   
