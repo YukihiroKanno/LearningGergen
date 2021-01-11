@@ -9,33 +9,28 @@ class ProfilesController < ApplicationController
 
   def new
     @profiles = Profile.new  
-    @count = Profile.count
-    @@count = @count
     puts "--- new count ---"
-    puts @@count
+    puts @profiles.id
     
   end
 
   def show
-    puts "-----profiles(show(params[:id]--"  
-    puts @@count
-    @profiles = Profile.find(@@count)
-    
+    @profiles = Profile.find(params[:id])
   end
 
   def edit
-    @profiles = Profile.find(@@count)  
+    @profiles = Profile.find(params[:id])  
   
   end
   
   def create
     # ストロングパラメーターを使用
-    ans = Profile.new(id:@@count)
+    ans = Profile.new(profile_params)
     ans.user_id = current_user.id
     # DBへ保存する
     ans.save
     # トップ画面へリダイレクト
-    redirect_to  profile_path(id:@@count)
+    redirect_to  profile_path(ans.id)
     puts "---- profiles(ans.user_id) ----"
     puts ans.user_id
     puts ans.capa
@@ -45,10 +40,10 @@ class ProfilesController < ApplicationController
   end
   
   def update
-   ans = Profile.find(@@count)
+   ans = Profile.find(params[:id])
    ans.user_id = current_user.id
    ans.update(profile_params)
-　 redirect_to  profile_path(@@count)
+　 redirect_to  profile_path(ans.id)
     
   end
   

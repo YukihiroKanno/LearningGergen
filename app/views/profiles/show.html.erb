@@ -11,8 +11,7 @@
         　<br>
           <% end %>
         <h3 class="menu_heda">2次試験受験経験</h3>
-        　<%= @profiles.expe %>  
-          　<% if @profiles.expe == 1 %>  
+       　<% if @profiles.expe == 1 %>  
         　  <p>有り</p>
         　  <br>
             <h3 class="menu_heda">事例1最高結果</h3>
@@ -81,7 +80,7 @@
        </div>    
      </div> 
  <div　class="button_side">
- <%= button_to "修正する。", {controller: 'profiles', action: 'edit'}, {method: :get} %>
+ <%= button_to "修正する。", {controller: 'profiles', action: 'edit'}, {method: :get}} %> 
 </div>       
   <br>
  <br>
