@@ -6,10 +6,10 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.3.6'
-gem 'sqlite3', '~> 1.3.6', group: :development
-# 本番ではpostgressを使用する
-gem 'pg', '>= 0.18', '< 2.0', group: :production
+gem 'sqlite3', groups: %w(test development), require: false
+
+gem 'pg', groups: %w(production), require: false
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -67,5 +67,5 @@ gem 'devise'
 # gem 'byebug'
 group :production do
   # Gemfileの1番下に追加しましょう。
-  gem 'pg', '>= 0.18', '< 2.0'
+  gem 'pg'
 end
